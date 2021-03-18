@@ -1,0 +1,5 @@
+name: MLflowtest
+
+entry_points:
+  main:
+    command: "python mlflow_test.py"
