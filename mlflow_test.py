@@ -26,6 +26,10 @@ import mlflow.sklearn
 # logging.info('test')
 # logger = logging.getLogger(__name__)
 
+#ディレクトリの取得
+FILE_DIR = os.path.dirname(os.path.abspath(__file__))
+print(FILE_DIR)
+
 with open("param.yaml") as stream:
     param_lgb = yaml.safe_load(stream)
     
