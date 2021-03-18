@@ -1,5 +1,0 @@
-name: MLflow MLproject check code
-
-entry_points:
-    main:
-        command: "python ./mlflow_test.py"
