@@ -64,10 +64,10 @@ def predict(X_train, y_train, X_test, outputfilename,param_lgb):
     preds_train = np.zeros(X_train.shape[0])
     preds_test = np.zeros(X_test.shape[0])
     
-    # mlflowのexperimentを生成
-    mlflow.set_experiment(param_lgb['experiment_name'])
-    tracking = mlflow.tracking.MlflowClient()
-    experiment = tracking.get_experiment_by_name(param_lgb['experiment_name'])
+    # # mlflowのexperimentを生成
+    # mlflow.set_experiment(param_lgb['experiment_name'])
+    # tracking = mlflow.tracking.MlflowClient()
+    # experiment = tracking.get_experiment_by_name(param_lgb['experiment_name'])
     
     with mlflow.start_run():#experiment_id=experiment.experiment_id, nested=True):
     
