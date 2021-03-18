@@ -1,0 +1,8 @@
+objective: 'binary'
+n_estimators: 200
+num_leaves: 8
+is_unbalance: True
+min_child_weight: 8
+
+experiment_name: 'mlflow_lightgbm_test'
+tag : 'mlflow_test'
