@@ -21,13 +21,16 @@ import lightgbm as lgb
 from mlflow import log_metric, log_param, log_artifact
 import mlflow.sklearn
 
-#logging
-logging.basicConfig(filename='last_outputs/logger.log',level=logging.WARN)
-logging.info('test')
-logger = logging.getLogger(__name__)
+# #logging
+# logging.basicConfig(filename='last_outputs/logger.log',level=logging.WARN)
+# logging.info('test')
+# logger = logging.getLogger(__name__)
 
 with open("param.yaml") as stream:
     param_lgb = yaml.safe_load(stream)
+    
+with open("folder_param.yaml") as stream:
+    folda_param = yaml.safe_load(stream)
 
 #データ取得
 input_data=pd.read_csv('./creditcard.csv')
