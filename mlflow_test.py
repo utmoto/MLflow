@@ -29,8 +29,8 @@ import mlflow.sklearn
 with open("param.yaml") as stream:
     param_lgb = yaml.safe_load(stream)
     
-with open("folder_param.yaml") as stream:
-    folda_param = yaml.safe_load(stream)
+# with open("folder_param.yaml") as stream:
+#     folda_param = yaml.safe_load(stream)
 
 #データ取得
 input_data=pd.read_csv('./creditcard.csv')
