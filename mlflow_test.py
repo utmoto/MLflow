@@ -114,7 +114,7 @@ def predict(X_train, y_train, X_test, outputfilename,param_lgb):
 
             #重要度保存
             importance = pd.DataFrame({'importance':clf.feature_importances_,'column_name':X_test.columns})
-            importance.to_csv('outputs/'+str(n_fold)+'_importance.csv')
+            importance.to_csv('content/MLflow/outputs/'+str(n_fold)+'_importance.csv')
             mlflow.log_artifacts("outputs")
             
             #tag保存
@@ -126,7 +126,7 @@ def predict(X_train, y_train, X_test, outputfilename,param_lgb):
         prob = prob.rename(columns={0:'TARGET'})
         prob.index.name = 'ID'
         prob['answer']=y_test
-        prob.to_csv('last_outputs/%s.csv'%outputfilename)
+        prob.to_csv('content/MLflow/last_outputs/%s.csv'%outputfilename)
         mlflow.log_artifacts("last_outputs")
 
         print('time:{}sec'.format(time()-start))
