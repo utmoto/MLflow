@@ -1,0 +1,14 @@
+experiment_name  : 'mlflow_colab_lightgbm_test'
+bucket_name      : "kaggle_ops_20210317_uchi"
+git_uri          : "https://github.com/utmoto/MLflow.git"
+tag              : 'mlflow_test'
+
+objective: 'binary'
+n_estimators: 200
+num_leaves: 8
+is_unbalance: True
+min_child_weight: 8
+
+
+
+
