@@ -1,0 +1,7 @@
+name: MLflowtest
+
+conda_env: conda.yaml
+
+entry_points:
+  main:
+    command: "python mlflow_test.py"
