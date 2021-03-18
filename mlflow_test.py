@@ -69,7 +69,7 @@ def predict(X_train, y_train, X_test, outputfilename,param_lgb):
     tracking = mlflow.tracking.MlflowClient()
     experiment = tracking.get_experiment_by_name(param_lgb['experiment_name'])
     
-    with mlflow.start_run()#experiment_id=experiment.experiment_id, nested=True):
+    with mlflow.start_run():#experiment_id=experiment.experiment_id, nested=True):
     
         folds = StratifiedKFold(n_splits= 5, shuffle=True, random_state=1001)
         for n_fold, (train_idx, valid_idx) in enumerate(folds.split(X_train, y_train)):
